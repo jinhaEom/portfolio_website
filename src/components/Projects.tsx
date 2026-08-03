@@ -249,7 +249,7 @@ const Projects = () => {
             title: "매장 재고관리·상품조회·발주검수 시스템 모바일화 및 QR 도입",
             company: "투게더 PDA",
             employer: "(주)투게더스",
-            period: "2024.05 - 2025.06",
+            period: "2024.09 - 2025.06",
             description:
                 "기존 포스기 화면에서만 존재하던 재고 관리, 상품 조회, 발주 검수 기능을 모바일 PDA 단말기로 이식하여 오프라인 매장 효율을 극대화하고, 작업자를 위한 편리한 스캔 인증 시스템을 도입했습니다.",
             topics: [
@@ -409,11 +409,7 @@ const Projects = () => {
                                         <div className="text-right shrink-0">
                                             <p className="text-accent font-medium text-xl">{project.company}</p>
                                             <p className="text-subtle text-base mt-0.5">{project.employer}</p>
-                                            {project.period.split(" / ").map((part, i) => (
-                                                <p key={i} className="text-muted text-base font-mono mt-1 whitespace-nowrap">
-                                                    {part}
-                                                </p>
-                                            ))}
+                                            <p className="text-muted text-base font-mono mt-1 whitespace-nowrap">{project.period}</p>
                                         </div>
                                     </div>
                                     <p className="text-subtle text-lg md:text-xl leading-relaxed max-w-4xl">
