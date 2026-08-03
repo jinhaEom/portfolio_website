@@ -11,16 +11,15 @@ const Navigation = ({ scrollY }: NavigationProps) => {
 
   const navItems = [
     { name: "About", href: "#about" },
-    { name: "Career", href: "#career" },
+    { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
   ];
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrollY > 50 ? "bg-bg/90 backdrop-blur-sm border-b border-border" : ""
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${scrollY > 50 ? "bg-bg/90 backdrop-blur-sm border-b border-border" : ""
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}

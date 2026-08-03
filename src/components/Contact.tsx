@@ -89,8 +89,20 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* Outro */}
+          <div className="mt-24 text-center max-w-3xl mx-auto space-y-6">
+            <h3 className="text-xl md:text-2xl font-medium leading-relaxed">
+              현재 상황에 안주하면, 그 사람은 도태된다고 생각합니다.<br />
+              <span className="text-accent underline underline-offset-4">"도태되지 말자"</span>라는 제 좌우명으로 매일매일 어제보다 더 나은 개발자가 되려고 노력합니다.
+            </h3>
+            <p className="text-subtle text-lg">
+              이 포트폴리오를 통해 저의 성장에 대한 열망과 제 가치를 보여드리고 싶었습니다.
+            </p>
+            <p className="text-muted text-sm pt-8">읽어주셔서 감사합니다.</p>
+          </div>
+
           {/* Footer */}
-          <div className="mt-24 pt-8 border-t border-border flex items-center justify-between">
+          <div className="mt-16 pt-8 border-t border-border flex items-center justify-between">
             <p className="text-muted text-sm">App Developer 엄진하</p>
           </div>
         </motion.div>

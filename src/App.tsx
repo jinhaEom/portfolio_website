@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
 import About from './components/About'
 import Summary from './components/Summary'
-import Career from './components/Career'
+import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Education from './components/Education'
@@ -26,7 +26,7 @@ function App() {
       <Hero />
       <About />
       <Summary />
-      <Career />
+      <Projects />
       <Skills />
       <Experience />
       <Education />

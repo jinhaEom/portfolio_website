@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaBlog, FaArrowDown } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
-import profileImage from "../../assets/images/profile_image.jpeg";
 
 const Hero = () => {
   return (
@@ -21,7 +20,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-64 h-80 md:w-92 md:h-92 rounded-2xl overflow-hidden border border-border">
                 <img
-                  src={profileImage}
+                  src={"assets/images/profile_image.jpeg"}
                   alt="엄진하"
                   className="w-full h- justify-center object-cover"
                 />
@@ -49,14 +48,14 @@ const Hero = () => {
 
             {/* Title */}
             <p className="text-xl md:text-2xl text-accent mb-8">
-              Mobile App Developer
+              React Native & Android Developer
             </p>
 
             {/* Description */}
             <p className="text-subtle max-w-xl text-lg leading-relaxed mb-12">
-              Android와 React Native로 3년간 실서비스를 개발하고 있습니다.
+              사용자의 입장에서 개발하는 개발자입니다. 💻
               <br />
-              사용자 경험을 최우선으로, 작은 개선이 큰 가치를 만든다고 믿습니다.
+              끊임없는 고민과 개선으로 앱 안정성과 사용자 경험 향상에 집중합니다.
             </p>
 
             {/* Links */}

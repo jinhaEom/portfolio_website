@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const Career = () => {
@@ -12,10 +11,10 @@ const Career = () => {
       period: "2023.10 — 현재",
       role: "App Developer",
       works: [
-        "React Native + TypeScript 기반 B2B 매출관리 앱 단독 개발",
-        "Kotlin 앱 리팩토링으로 NPE 충돌률 8% → 1% 감소",
-        "컴포넌트 아키텍처 도입, UI 소스코드 90% 축소",
-        "배달 기능 확장으로 6개월간 MAU 50% 증가",
+        "React Native + TypeScript 기반 B2B 매출관리 앱을 단독으로 설계·개발 및 운영",
+        "레거시 Kotlin 앱 리팩토링으로 NPE 충돌률 8% → 1% 감소",
+        "컴포넌트 아키텍처 도입으로 레거시 소스코드 80% 축소, 유지보수성 개선",
+        "서비스 운영 3개월간 MAU 50% 성장 기여",
       ],
     },
     {
@@ -25,6 +24,7 @@ const Career = () => {
       works: [
         "비대면 진료 프로세스 70% 개발 주도",
         "복약 알림 기능 오류 발생률 40% 감소",
+        "Sendbird Sdk 활용한 채팅 기능 구현",
       ],
     },
   ];
