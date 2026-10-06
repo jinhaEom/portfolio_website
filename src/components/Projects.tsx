@@ -7,7 +7,6 @@ import { ProjectCard, ProjectItem } from "./projects/ProjectCard";
 
 const img = (name: string) => `assets/images/${name}.png`;
 
-// 대표 프로젝트 (상세 보기 가능)
 const mainProjects: ProjectItem[] = [
     {
         meta: "투게더 공급사 · 2025.04 - 2025.10 · 2026.04 - 2026.07",
@@ -28,24 +27,6 @@ const mainProjects: ProjectItem[] = [
         detail: <SupplierDetail />,
     },
     {
-        meta: "투게더 PDA · 2025.06 - 2025.11 · 2026.08 - 2026.10",
-        title: "레거시 구조 정비(DataBinding 전환) 및 UI 리뉴얼",
-        desc: "마트 현장 작업자가 쓰는 PDA 앱",
-        stats: [
-            { value: "1% 미만", label: "NPE 발생률 (기존 8%)" },
-            { value: "549개", label: "DataBinding 전환 파일" },
-            { value: "API 36", label: "구글 정책 대응" },
-        ],
-        works: [
-            "deprecated된 kotlin-android-extensions를 DataBinding으로 전면 전환",
-            "안내 박스·팝업·날짜 선택 뷰 공통 컴포넌트화 및 전체 UI 리뉴얼",
-            "화면 폭 대응 레이아웃 · PDA 물리 키(KeyEvent) 포커스 이동",
-        ],
-        tags: ["Kotlin", "MVVM", "DataBinding", "Realm", "Android Jetpack"],
-        images: [img("pda_new_stock_disposal"), img("pda_new_delivery_summary"), img("pda_new_common_popup")],
-        detail: <PdaDetail />,
-    },
-    {
         meta: "MPOS 라이트 · 2026.02 - 2026.05",
         title: "소규모 마트 전용 매출관리 앱 MVP 개발",
         desc: "장소 제약 없이 매출을 확인하는 iOS · Android 앱",
@@ -63,9 +44,26 @@ const mainProjects: ProjectItem[] = [
         images: [img("smpos1"), img("smpos2"), img("smpos4")],
         detail: <MposDetail />,
     },
+        {
+        meta: "투게더 PDA · 2025.06 - 2025.11 · 2026.08 - 2026.10",
+        title: "레거시 구조 정비(DataBinding 전환) 및 UI 리뉴얼",
+        desc: "마트 현장 작업자가 쓰는 PDA 앱",
+        stats: [
+            { value: "1% 미만", label: "NPE 발생률 (기존 8%)" },
+            { value: "549개", label: "DataBinding 전환 파일" },
+            { value: "API 36", label: "구글 정책 대응" },
+        ],
+        works: [
+            "deprecated된 kotlin-android-extensions를 DataBinding으로 전면 전환",
+            "안내 박스 · 팝업 · 날짜 선택 뷰 공통 컴포넌트화 및 전체 UI 리뉴얼",
+            "화면 폭 대응 레이아웃 · PDA 물리 키(KeyEvent) 포커스 이동방식 구현",
+        ],
+        tags: ["Kotlin", "MVVM", "DataBinding", "Realm", "Android Jetpack"],
+        images: [img("pda_new_stock_disposal"), img("pda_new_delivery_summary"), img("pda_new_common_popup")],
+        detail: <PdaDetail />,
+    },
 ];
 
-// 그 외 프로젝트 (접고 펴는 중복 없이 카드 자체로 완결)
 const otherProjects: ProjectItem[] = [
     {
         meta: "투게더 PDA · 2024.09 - 2025.06 · QR 2024.05 - 06",
