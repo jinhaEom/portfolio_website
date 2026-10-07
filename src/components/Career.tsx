@@ -20,7 +20,7 @@ const Career = () => {
       company: "(주)헬스포트",
       period: "2023.03 ~ 2023.08",
       role: "Kotlin(Android) 앱 개발자",
-      works: ["Android 앱 개발 - 굿팜 앱"],
+      works: ["Android 앱 개발 출시 · 운영 담당 - 굿팜 앱"],
     },
   ];
 

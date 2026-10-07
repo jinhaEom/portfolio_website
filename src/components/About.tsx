@@ -31,19 +31,15 @@ const About = () => {
             {/* Left */}
             <div className="space-y-6">
               <p className="text-2xl md:text-3xl font-medium leading-relaxed">
-                조직과 함께
+                Kotlin과 React Native,
                 <br />
                 <span className="text-subtle">
-                  성장하고자 합니다. ☝️
+                  둘 다 실무로 다룹니다. ☝️
                 </span>
               </p>
 
               <p className="text-subtle leading-relaxed">
-                Kotlin 네이티브와 React Native를 모두 실무에서 다루는 앱 개발자 엄진하입니다.
-                <br /><br />
-                현재 Kotlin 앱과 React Native 앱을 개발·출시·운영하고 있습니다. 기존 Kotlin 앱을 React Native로 마이그레이션하고 iOS 앱까지 출시해 월 이용자 수를 20% 이상 늘렸습니다. Kotlin으로 운영 중인 앱은 레거시 구조를 정리해 NPE 발생률을 8%에서 1% 미만으로 낮췄고, 꾸준한 성능 개선과 안정화 작업으로 MAU 약 2천 명을 유지하고 있습니다.
-                <br /><br />
-                서비스를 넓히는 일과 안정적으로 지키는 일을 모두 경험한 만큼, 어떤 서비스에서든 이 두 가지를 함께 책임지는 개발자가 되고 싶습니다.
+                새 플랫폼으로 서비스를 넓히는 일과, 운영 중인 앱을 안정적으로 지키는 일을 함께 해왔습니다.
               </p>
             </div>
 
