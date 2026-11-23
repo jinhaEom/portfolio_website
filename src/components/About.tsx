@@ -6,11 +6,11 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const highlights = [
-    { label: "MAU 상승 경험", value: "+20%" },
-    { label: "MAU 유지 경험", value: "약 2,000명" },
-    { label: "React Native", value: "마이그레이션 경험" },
-    { label: "React Native · Kotlin", value: "1인 개발·운영경험" },
-
+    { value: "+20%", label: "React Native iOS 확장 후 MAU", source: "투게더 공급사 앱" },
+    { value: "1% 미만", label: "NPE 발생률 (기존 8%)", source: "투게더 PDA 앱" },
+    { value: "-90%", label: "비밀번호 분실 CS 문의", source: "투게더 PDA 앱" },
+    { value: "+50%", label: "배달 재설계 후 3개월간 MAU", source: "투게더 PDA 앱" },
+    { value: "-40%", label: "알림 관련 비정상 종료율", source: "굿팜 앱" },
   ];
 
   return (
@@ -39,7 +39,9 @@ const About = () => {
               </p>
 
               <p className="text-subtle leading-relaxed">
-                새 플랫폼으로 서비스를 넓히는 일과, 운영 중인 앱을 안정적으로 지키는 일을 함께 해왔습니다.
+                기존 Kotlin 앱을 React Native로 마이그레이션해 iOS까지 출시했고, 지금은 React Native 앱과 Kotlin 앱의 개발·출시·운영을 맡고 있습니다.
+                <br />
+                서비스를 넓히는 일과 안정적으로 지키는 일을 함께 책임지는 개발자가 되고 싶습니다.
               </p>
             </div>
 
@@ -57,6 +59,7 @@ const About = () => {
                     {item.value}
                   </div>
                   <div className="text-sm text-subtle">{item.label}</div>
+                  <div className="text-xs text-muted mt-1">{item.source}</div>
                 </motion.div>
               ))}
             </div>

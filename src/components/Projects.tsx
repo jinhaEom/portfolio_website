@@ -1,6 +1,7 @@
 import {
     MposDetail,
     PdaDetail,
+    StampFitDetail,
     SupplierDetail,
 } from "./projects/details";
 import { ProjectCard, ProjectItem } from "./projects/ProjectCard";
@@ -20,7 +21,7 @@ const mainProjects: ProjectItem[] = [
         works: [
             "기존 Kotlin MVVM 구조·비즈니스 로직을 분석해 React Native로 전환",
             "단일 코드베이스로 App Store · Google Play 출시",
-            "전사 디자인 시스템 기반 앱 전체 UI 리뉴얼 (디자이너와 UI/UX 협의)",
+            "사내 디자인 시스템 통합 방침에 따라 디자이너와 UI/UX를 협의해 앱 전체 UI 리뉴얼",
         ],
         tags: ["React Native", "TypeScript", "TanStack Query", "Zustand", "Tailwind CSS"],
         images: [img("mptr1"), img("mptr2"), img("mptr4")],
@@ -32,8 +33,8 @@ const mainProjects: ProjectItem[] = [
         desc: "장소 제약 없이 매출을 확인하는 iOS · Android 앱",
         stats: [
             { value: "20개 화면", label: "iOS · Android MVP" },
-            { value: "약 3개월", label: "목표 일정 내 구현 완료" },
-            { value: "1인", label: "기획·개발 전담" },
+            { value: "약 3개월", label: "마트 시연 일정 내 구현 완료" },
+            { value: "1인", label: "개발 전담" },
         ],
         works: [
             "데이터가 많은 매출·재고 화면에 맞춘 공통 UI 컴포넌트 모듈화",
@@ -55,8 +56,8 @@ const mainProjects: ProjectItem[] = [
         ],
         works: [
             "deprecated된 kotlin-android-extensions를 DataBinding으로 전면 전환",
-            "안내 박스 · 팝업 · 날짜 선택 뷰 공통 컴포넌트화 및 전체 UI 리뉴얼",
-            "화면 폭 대응 레이아웃 · PDA 물리 키(KeyEvent) 포커스 이동방식 구현",
+            "안내문구 · 팝업 · 날짜 선택 뷰 공통 컴포넌트화 및 전체 UI 리뉴얼",
+            "저해상도 PDA부터 스마트폰까지 화면 폭 대응 · 물리 키(KeyEvent) 포커스 이동 구현",
         ],
         tags: ["Kotlin", "MVVM", "DataBinding", "Realm", "Android Jetpack"],
         images: [img("pda_new_stock_disposal"), img("pda_new_delivery_summary"), img("pda_new_common_popup")],
@@ -83,8 +84,8 @@ const otherProjects: ProjectItem[] = [
     },
     {
         meta: "투게더 PDA · 2024.01 - 2024.06",
-        title: "배달 프로세스 재설계 및 결제 연동 오류 정상화",
-        desc: "타 서비스에서 이관된 배달 코드를 PDA 환경에 맞게 화면을 재설계하고 결제 연동 및 상태 동기화 오류를 해결했습니다.",
+        title: "배달 프로세스 재설계 및 결제 시스템 안정화",
+        desc: "타 서비스에서 베타로 운영되던 배달 코드를 PDA 환경에 맞게 재설계하고, 외부 결제 앱 승인 결과 처리 오류와 배달 상태 갱신 문제를 해결했습니다.",
         stats: [
             { value: "+50%", label: "도입 후 3개월간 MAU" },
             { value: "0건", label: "결제 승인 결과 누락 오류" },
@@ -108,10 +109,32 @@ const otherProjects: ProjectItem[] = [
         works: [
             "진료 단계(요청·승인·결제·처방) 상태값 분리 → 화면 및 FCM 푸시 알림 실시간 연동",
             "Crashlytics 로그 추적으로 제조사별 백그라운드 FCM 수신부 예외 처리 보강",
-            "복약 순응도 추적 기능 및 BroadcastReceiver 기반 정시 알림 구현",
+            "복약 알림을 켜두도록 유도하는 '복약 순응도' 기능 및 BroadcastReceiver 기반 정시 알림 구현",
         ],
-        tags: ["Kotlin", "MVVM", "Coroutines", "Room", "FCM", "Crashlytics"],
+        tags: ["Kotlin", "MVVM", "DataBinding", "Coroutines", "Room", "FCM", "Crashlytics"],
         images: [img("goodpharm_1"), img("goodpharm_2")],
+    },
+];
+
+const sideProjects: ProjectItem[] = [
+    {
+        meta: "스탬핏(StampFit) · 개인 프로젝트 · 2026.10 iOS 출시",
+        title: "운동 기록 캘린더 앱 1인 개발 · App Store 출시",
+        desc: "세트 · 무게 없이 운동한 날 도장 하나 찍는 운동 캘린더 앱",
+        stats: [
+            { value: "1인", label: "기획부터 출시까지" },
+            { value: "App Store", label: "2026.10 iOS 출시" },
+            { value: "2개 OS", label: "홈 화면 위젯 직접 구현" },
+        ],
+        works: [
+            "세트 · 무게 · 횟수 입력 없이 운동 부위와 시간만 고르면 캘린더에 도장이 찍히는 방식으로 기록 과정 단순화",
+            "기록을 기기(expo-sqlite)에 먼저 저장한 뒤 계정(Supabase)으로 동기화해 오프라인에서도 사용 가능",
+            "iOS는 expo-widgets(SwiftUI), Android는 Kotlin · Jetpack Glance로 홈 화면 위젯 직접 구현",
+        ],
+        tags: ["Expo (React Native)", "TypeScript", "Expo Router", "NativeWind", "Zustand", "expo-sqlite", "Supabase", "Jetpack Glance"],
+        images: [img("stampfit_record_done"), img("stampfit_home"), img("stampfit_calendar")],
+        link: { label: "GitHub", href: "https://github.com/jinhaEom/StampFit" },
+        detail: <StampFitDetail />,
     },
 ];
 
@@ -138,6 +161,17 @@ const Projects = () => (
             <div className="space-y-6">
                 {otherProjects.map((project, index) => (
                     <ProjectCard key={project.title} project={project} reverse={index % 2 === 1} compact />
+                ))}
+            </div>
+
+            {/* 개인 프로젝트 */}
+            <div className="mt-16 mb-6 flex items-center gap-4">
+                <h3 className="text-lg font-semibold">Side Project</h3>
+                <div className="flex-1 h-px bg-border" />
+            </div>
+            <div className="space-y-6">
+                {sideProjects.map((project) => (
+                    <ProjectCard key={project.title} project={project} />
                 ))}
             </div>
         </div>

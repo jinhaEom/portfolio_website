@@ -15,7 +15,7 @@ export const Chips = ({ items }: { items: string[] }) => (
 /* 핵심 숫자 박스 */
 export const Stat = ({ value, label }: { value: string; label: string }) => (
     <div className="rounded-xl border border-border bg-bg/60 px-4 py-3">
-        <p className="text-accent text-lg md:text-xl font-semibold whitespace-nowrap">{value}</p>
+        <p className="text-accent text-lg md:text-xl font-semibold">{value}</p>
         <p className="text-subtle text-xs mt-1 leading-snug">{label}</p>
     </div>
 );

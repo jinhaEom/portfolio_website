@@ -11,6 +11,7 @@ export type ProjectItem = {
     works: string[];
     tags: string[];
     images: string[];
+    link?: { label: string; href: string };
     detail?: React.ReactNode;
 };
 
@@ -76,17 +77,29 @@ export const ProjectCard = ({
 
                     <div className={`flex flex-wrap items-center justify-between gap-4 ${compact ? "mt-5" : "mt-6"}`}>
                         <Chips items={project.tags} />
-                        {project.detail && (
-                            <button
-                                type="button"
-                                onClick={() => setOpen(!open)}
-                                aria-expanded={open}
-                                className="text-accent text-sm flex items-center gap-2 hover:opacity-80 transition-opacity"
-                            >
-                                {open ? "접기" : "상세 보기"}
-                                <FaChevronDown className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-                            </button>
-                        )}
+                        <div className="flex items-center gap-4">
+                            {project.link && (
+                                <a
+                                    href={project.link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-subtle text-sm hover:text-accent transition-colors"
+                                >
+                                    {project.link.label} ↗
+                                </a>
+                            )}
+                            {project.detail && (
+                                <button
+                                    type="button"
+                                    onClick={() => setOpen(!open)}
+                                    aria-expanded={open}
+                                    className="text-accent text-sm flex items-center gap-2 hover:opacity-80 transition-opacity"
+                                >
+                                    {open ? "접기" : "상세 보기"}
+                                    <FaChevronDown className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

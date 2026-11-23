@@ -48,7 +48,7 @@ const Hero = () => {
 
             {/* Title */}
             <p className="text-xl md:text-2xl text-accent mb-8">
-              React Native & Android Developer
+              Mobile App Developer · React Native & Android
             </p>
 
             {/* Description */}

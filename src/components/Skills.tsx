@@ -7,10 +7,10 @@ const Skills = () => {
 
   // 이력서 Skill 섹션과 동일한 구성
   const skillGroups = [
-    { title: "React Native", items: ["TypeScript", "TanStack Query", "Zustand"] },
-    { title: "Android", items: ["Kotlin", "Coroutines", "Jetpack"] },
-    { title: "Tools", items: ["Firebase (FCM, Analytics, Crashlytics)", "Git"] },
-    { title: "Collaboration", items: ["Figma", "Notion", "Slack"] },
+    { title: "React Native", items: ["TypeScript", "Expo (Expo Router)", "TanStack Query", "Zustand", "NativeWind (Tailwind CSS)"] },
+    { title: "Android", items: ["Kotlin", "Coroutines", "Jetpack Compose", "MVVM", "DataBinding", "Hilt", "Retrofit2", "Realm"] },
+    { title: "BaaS", items: ["Firebase (FCM, Crashlytics, Analytics)", "Supabase"] },
+    { title: "Tools", items: ["Git", "Forgejo Actions (GitHub Actions 방식 CI)"] },
   ];
 
   return (

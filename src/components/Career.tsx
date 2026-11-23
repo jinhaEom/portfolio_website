@@ -9,10 +9,10 @@ const Career = () => {
   const careers = [
     {
       company: "(주)투게더스",
-      period: "2023.10 ~ current",
-      role: "React Native, Kotlin(Android) 앱 개발자",
+      period: "2023.10 ~ 현재",
+      role: "React Native · Kotlin(Android) 앱 개발자",
       works: [
-        "모바일 앱 1인 개발 - React Native 앱, Kotlin 앱의 개발·출시·운영 전담",
+        "모바일 앱 1인 개발 · RN 앱과 Kotlin 앱의 개발·출시·운영 전담",
         "투게더 공급사 앱 · MPOS 라이트 앱 · 투게더 PDA 앱",
       ],
     },
@@ -20,7 +20,7 @@ const Career = () => {
       company: "(주)헬스포트",
       period: "2023.03 ~ 2023.08",
       role: "Kotlin(Android) 앱 개발자",
-      works: ["Android 앱 개발 출시 · 운영 담당 - 굿팜 앱"],
+      works: ["Android 앱 개발 · 굿팜 앱 (비대면 진료 · 복약 관리)"],
     },
   ];
 

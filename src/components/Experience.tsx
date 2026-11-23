@@ -8,17 +8,17 @@ const Experience = () => {
 
   const experiences = [
     {
+      period: "2017.03 — 2023.03",
+      title: "백석대학교",
+      desc: "컴퓨터공학과 졸업 · 학점평균 3.6/4.5, 전공평균 3.7/4.5",
+    },
+    {
       period: "2020.11",
-      title: "2020 IIBC Start-up Contest",
+      title: "2020 IIBC Start-up Invention Contest",
       desc: "한국인터넷방송통신학회 주관 · 교내 학생전용 게시판 어플 — 단체상",
     },
     {
-      period: "2017 — 2023",
-      title: "백석대학교",
-      desc: "컴퓨터공학과 졸업 · 학점 3.6 / 전공 3.7",
-    },
-    {
-      period: "2024 — 현재",
+      period: "2024.03 — 현재",
       title: "기술 블로그",
       desc: "개발 경험과 기술을 공유하는 Velog 블로그 운영 중",
       link: "https://velog.io/@umjin98/posts",

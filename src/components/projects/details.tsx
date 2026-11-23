@@ -1,5 +1,5 @@
 import { FaArrowDown, FaArrowRight } from "react-icons/fa";
-import { BeforeAfter, Block, LineBox, Steps } from "./parts";
+import { BeforeAfter, Block, Chips, LineBox, Steps } from "./parts";
 
 const img = (name: string) => `assets/images/${name}.png`;
 
@@ -77,7 +77,7 @@ export const PdaDetail = () => (
                             <span className="text-accent font-mono mr-2">1차</span>
                             DataBinding 전환 · 2025.06 - 2025.11
                         </p>
-                        <Steps items={["변환 표준 정의", "AI 일괄 변환", "전수 빌드 검증"]} />
+                        <Steps items={["변환 규칙 설계", "AI 일괄 변환", "전 파일 수동 검수"]} />
                         <p className="text-subtle text-sm mt-2">
                             XML 구조 · Base 바인딩 표준 규칙을 수립해 AI 변환 정확도를 높이고, 전수 검수로 549개 파일 전환
                         </p>
@@ -97,6 +97,12 @@ export const PdaDetail = () => (
                 </div>
             </Block>
         </div>
+        <Block title="테스트 자동화 (CI)">
+            <Steps items={["push", "바코드 정제 로직 단위 테스트 자동 실행", "배포 전 회귀 검증"]} />
+            <p className="text-subtle text-sm mt-2">
+                Forgejo Actions 기반 CI를 구축해 일반 · QR · 박스 바코드 등 바코드 정제 로직을 push마다 검증
+            </p>
+        </Block>
         <Block title="UI 리뉴얼 이전 / 이후">
             <div className="flex flex-wrap justify-center gap-x-10 gap-y-6">
                 <BeforeAfter before={img("together_pda_2")} after={img("pda_new_stock_disposal")} />
@@ -142,4 +148,36 @@ export const MposDetail = () => (
     </div>
 );
 
+// 스탬핏 주요 기능
+const stampFeatures = ["주간 목표 · 연속 달성", "1년치 기록 히트맵", "월간 통계", "Apple · Google · 이메일 로그인", "목표 미달 시 알림"];
+// 스탬핏 주요 화면
+const stampScreens = ["stampfit_heatmap", "stampfit_stats", "stampfit_widget"];
 
+/* 04 스탬핏 상세 */
+export const StampFitDetail = () => (
+    <>
+        <div className="grid lg:grid-cols-2 gap-8">
+            <Block title="기획 배경">
+                <div className="space-y-2">
+                    <LineBox>운동 기록 앱 대부분이 세트 · 무게 · 횟수까지 입력해야 해서 며칠 쓰다 보면 기록 자체가 귀찮아짐</LineBox>
+                    <LineBox>"오늘 운동했는지"에만 집중해 부위와 시간만 고르면 기록이 끝나도록 설계</LineBox>
+                </div>
+            </Block>
+            <div className="space-y-8">
+                <Block title="오프라인 우선 저장">
+                    <Steps items={["기기 저장 (expo-sqlite)", "계정 동기화 (Supabase)"]} />
+                </Block>
+                <Block title="주요 기능">
+                    <Chips items={stampFeatures} />
+                </Block>
+            </div>
+        </div>
+        <Block title="주요 화면 (히트맵 · 통계 · 위젯)">
+            <div className="flex flex-wrap justify-center gap-6">
+                {stampScreens.map((name) => (
+                    <img key={name} src={img(name)} alt="스탬핏 화면" className="h-[260px] md:h-[300px] w-auto" />
+                ))}
+            </div>
+        </Block>
+    </>
+);
